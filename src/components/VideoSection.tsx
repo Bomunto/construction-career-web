@@ -21,10 +21,10 @@ const VideoSection = () => {
           <div className="relative bg-construction-900 rounded-2xl overflow-hidden shadow-2xl aspect-video">
             <video 
               controls 
-              poster="/public/imccover.jpeg"
+              poster="/imccover.jpeg"
               className="w-full h-full object-cover"
             >
-              <source src="/public/imc_TXiBjLr0.mp4" type="video/mp4" />
+              <source src="/imc_TXiBjLr0.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
             
