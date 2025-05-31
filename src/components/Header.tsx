@@ -89,7 +89,7 @@ const Header = () => {
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                item.href.startsWith('/#') ? (
+                item.href.startsWith('/') ? (
                   <a
                     key={item.name}
                     href={item.href}
