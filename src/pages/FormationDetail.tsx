@@ -14,7 +14,9 @@ import {
   Euro,
   GraduationCap,
   Target,
-  BookOpen
+  BookOpen,
+  Banknote,
+  Phone
 } from 'lucide-react';
 import { formations } from '@/data/formations';
 import Header from '@/components/Header';
@@ -42,11 +44,14 @@ const FormationDetail = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <div className="mb-8">
-          <Link to="/#formations" className="inline-flex items-center text-construction-600 hover:text-construction-700">
+          <Link
+            to="/#formations"
+            className="inline-flex items-center text-construction-600 hover:text-construction-700"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Retour aux formations
           </Link>
@@ -64,7 +69,7 @@ const FormationDetail = () => {
                 <p className="text-xl text-white/90">{formation.description}</p>
               </div>
             </div>
-            
+
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-white/10 rounded-lg p-4 text-center">
                 <Clock className="w-6 h-6 mx-auto mb-2" />
@@ -77,7 +82,7 @@ const FormationDetail = () => {
                 <p className="text-sm text-white/80">Niveau</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 text-center">
-                <Euro className="w-6 h-6 mx-auto mb-2" />
+                <Banknote className="w-6 h-6 mx-auto mb-2" />
                 <p className="font-semibold">{formation.price}</p>
                 <p className="text-sm text-white/80">Tarif</p>
               </div>
@@ -141,7 +146,9 @@ const FormationDetail = () => {
                   {formation.career.map((career, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-construction-500 rounded-full flex-shrink-0"></div>
-                      <span className="text-gray-700 font-medium">{career}</span>
+                      <span className="text-gray-700 font-medium">
+                        {career}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -178,15 +185,23 @@ const FormationDetail = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-construction-700 mb-2">Cours de jour</h4>
+                  <h4 className="font-semibold text-construction-700 mb-2">
+                    Cours de jour
+                  </h4>
                   {formation.schedule.jour.map((schedule, index) => (
-                    <p key={index} className="text-sm text-gray-600">{schedule}</p>
+                    <p key={index} className="text-sm text-gray-600">
+                      {schedule}
+                    </p>
                   ))}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-construction-700 mb-2">Cours du soir</h4>
+                  <h4 className="font-semibold text-construction-700 mb-2">
+                    Cours du soir
+                  </h4>
                   {formation.schedule.soir.map((schedule, index) => (
-                    <p key={index} className="text-sm text-gray-600">{schedule}</p>
+                    <p key={index} className="text-sm text-gray-600">
+                      {schedule}
+                    </p>
                   ))}
                 </div>
               </CardContent>
@@ -227,16 +242,32 @@ const FormationDetail = () => {
             <Card className="bg-construction-50 border-construction-200">
               <CardContent className="pt-6">
                 <div className="text-center space-y-4">
-                  <h3 className="font-bold text-construction-800">Intéressé par cette formation ?</h3>
+                  <h3 className="font-bold text-construction-800">
+                    Intéressé par cette formation ?
+                  </h3>
                   <p className="text-sm text-construction-600">
-                    Contactez-nous pour plus d'informations ou pour vous inscrire.
+                    Contactez-nous pour plus d'informations ou pour vous
+                    inscrire.
                   </p>
                   <div className="space-y-2">
                     <Button className="w-full bg-construction-600 hover:bg-construction-700">
                       Demander des informations
                     </Button>
-                    <Button variant="outline" className="w-full border-construction-600 text-construction-600 hover:bg-construction-50">
-                      Nous appeler
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-construction-600 text-construction-600 hover:bg-construction-50"
+                    >
+                      {/* L’ancre reçoit le style du bouton grâce à asChild */}
+                      <a
+                        href="tel:+237699540594"
+                        aria-label="Appeler le +237 699 54 05 94"
+                        className="flex items-center justify-center"
+                      >
+                        <Phone className="w-4 h-4 mr-2" />
+                        {/* Affichage lisible du numéro : espaces insécables (&nbsp;) */}
+                        Nous appeler
+                      </a>
                     </Button>
                   </div>
                 </div>

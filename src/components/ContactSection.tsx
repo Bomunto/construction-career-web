@@ -22,7 +22,8 @@ const ContactSection = () => {
             CONTACTEZ-NOUS
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nous sommes là pour répondre à toutes vos questions et vous accompagner dans votre projet de formation
+            Nous sommes là pour répondre à toutes vos questions et vous
+            accompagner dans votre projet de formation
           </p>
         </div>
 
@@ -38,49 +39,62 @@ const ContactSection = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <p className="text-gray-600 text-lg">
-                  Notre équipe est à votre disposition pour vous guider dans le choix de votre formation 
-                  et répondre à toutes vos questions.
+                  Notre équipe est à votre disposition pour vous guider dans le
+                  choix de votre formation et répondre à toutes vos questions.
                 </p>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 p-4 bg-construction-50 rounded-lg">
                     <div className="bg-construction-100 p-3 rounded-lg">
                       <MapPin className="w-5 h-5 text-construction-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-construction-800">Adresse</h4>
-                      <p className="text-gray-600">1234 Rue de la Construction<br />Montréal, QC H1X 1X1</p>
+                      <h4 className="font-semibold text-construction-800">
+                        Adresse
+                      </h4>
+                      <p className="text-gray-600">
+                        ETOUDI,
+                        <br />
+                        Yaoundé, CM
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-4 p-4 bg-construction-50 rounded-lg">
                     <div className="bg-construction-100 p-3 rounded-lg">
                       <Phone className="w-5 h-5 text-construction-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-construction-800">Téléphone</h4>
-                      <p className="text-gray-600">514-XXX-XXXX</p>
+                      <h4 className="font-semibold text-construction-800">
+                        Téléphone
+                      </h4>
+                      <p className="text-gray-600">+237 6 99 54 05 94</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-4 p-4 bg-construction-50 rounded-lg">
                     <div className="bg-construction-100 p-3 rounded-lg">
                       <Mail className="w-5 h-5 text-construction-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-construction-800">Email</h4>
-                      <p className="text-gray-600">info@imc-formation.ca</p>
+                      <h4 className="font-semibold text-construction-800">
+                        Email
+                      </h4>
+                      <p className="text-gray-600">info@imc-formation.cm</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-4 p-4 bg-construction-50 rounded-lg">
                     <div className="bg-construction-100 p-3 rounded-lg">
                       <Clock className="w-5 h-5 text-construction-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-construction-800">Horaires d'accueil</h4>
+                      <h4 className="font-semibold text-construction-800">
+                        Horaires d'accueil
+                      </h4>
                       <p className="text-gray-600">
-                        Lun-Ven: 8h00 - 18h00<br />
+                        Lun-Ven: 8h00 - 18h00
+                        <br />
                         Sam: 9h00 - 16h00
                       </p>
                     </div>
@@ -116,21 +130,29 @@ const ContactSection = () => {
                     <Input placeholder="Votre nom" className="h-12" />
                   </div>
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Email *
                   </label>
-                  <Input type="email" placeholder="votre.email@exemple.com" className="h-12" />
+                  <Input
+                    type="email"
+                    placeholder="votre.email@exemple.com"
+                    className="h-12"
+                  />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Téléphone
                   </label>
-                  <Input type="tel" placeholder="514-XXX-XXXX" className="h-12" />
+                  <Input
+                    type="tel"
+                    placeholder="+237699540594"
+                    className="h-12"
+                  />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Formation d'intérêt
@@ -138,31 +160,36 @@ const ContactSection = () => {
                   <select className="w-full h-12 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-construction-500">
                     <option value="">Sélectionnez une formation</option>
                     <option value="gestion">Gestion de chantier</option>
-                    <option value="charpenterie">Charpenterie-menuiserie</option>
-                    <option value="electricite">Électricité de construction</option>
+                    <option value="charpenterie">
+                      Charpenterie-menuiserie
+                    </option>
+                    <option value="electricite">
+                      Électricité de construction
+                    </option>
                     <option value="plomberie">Plomberie et chauffage</option>
                     <option value="finition">Finition de bâtiment</option>
                     <option value="securite">Sécurité sur chantier</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Message
                   </label>
-                  <Textarea 
+                  <Textarea
                     placeholder="Décrivez votre projet ou posez vos questions..."
                     className="min-h-[120px]"
                   />
                 </div>
-                
+
                 <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white h-12 text-lg font-semibold">
                   <Send className="w-5 h-5 mr-2" />
                   Envoyer ma demande
                 </Button>
-                
+
                 <p className="text-sm text-gray-500 text-center">
-                  * Champs obligatoires. Nous nous engageons à protéger vos données personnelles.
+                  * Champs obligatoires. Nous nous engageons à protéger vos
+                  données personnelles.
                 </p>
               </form>
             </CardContent>

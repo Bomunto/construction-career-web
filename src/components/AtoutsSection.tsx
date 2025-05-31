@@ -58,14 +58,15 @@ const AtoutsSection = () => {
             NOS ATOUTS
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Découvrez ce qui fait la différence de l'Institut des Métiers de la Construction
+            Découvrez ce qui fait la différence de l'Institut des Métiers de la
+            Construction
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {atouts.map((atout, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-md"
             >
               <CardContent className="p-8">
@@ -74,11 +75,11 @@ const AtoutsSection = () => {
                     <atout.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-construction-800 mb-4 group-hover:text-orange-600 transition-colors duration-300">
                   {atout.title}
                 </h3>
-                
+
                 <p className="text-gray-600 leading-relaxed">
                   {atout.description}
                 </p>
@@ -94,11 +95,12 @@ const AtoutsSection = () => {
               Prêt à commencer votre formation ?
             </h3>
             <p className="text-xl text-construction-100 mb-8 max-w-2xl mx-auto">
-              Rejoignez-nous et bénéficiez de tous ces avantages pour construire votre avenir professionnel
+              Rejoignez-nous et bénéficiez de tous ces avantages pour construire
+              votre avenir professionnel
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300">
-                Découvrir nos formations
+                <a href="#formations">Découvrir nos formations</a>
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-construction-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Demander des informations

@@ -28,29 +28,30 @@ const Footer = () => {
                 <p className="text-construction-300">de la Construction</p>
               </div>
             </div>
-            
+
             <p className="text-construction-200 mb-6 max-w-md leading-relaxed">
-              Votre partenaire de confiance pour une formation de qualité dans le secteur de la construction. 
-              Nous formons les professionnels de demain avec passion et expertise.
+              Votre partenaire de confiance pour une formation de qualité dans
+              le secteur de la construction. Nous formons les professionnels de
+              demain avec passion et expertise.
             </p>
-            
+
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="bg-construction-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="bg-construction-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="bg-construction-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-300"
                 aria-label="Instagram"
               >
@@ -64,27 +65,42 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Liens rapides</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#accueil" className="text-construction-200 hover:text-orange-400 transition-colors duration-200">
+                <a
+                  href="#accueil"
+                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
+                >
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="#formations" className="text-construction-200 hover:text-orange-400 transition-colors duration-200">
+                <a
+                  href="#formations"
+                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
+                >
                   Nos formations
                 </a>
               </li>
               <li>
-                <a href="#atouts" className="text-construction-200 hover:text-orange-400 transition-colors duration-200">
+                <a
+                  href="#atouts"
+                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
+                >
                   Nos atouts
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-construction-200 hover:text-orange-400 transition-colors duration-200">
+                <a
+                  href="#contact"
+                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
+                >
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-construction-200 hover:text-orange-400 transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
+                >
                   Inscription
                 </a>
               </li>
@@ -99,23 +115,30 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-construction-200">
-                    1234 Rue de la Construction<br />
-                    Montréal, QC H1X 1X1
+                    ETOUDI,
+                    <br />
+                    Yaoundé, CM
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                <a href="tel:514XXXXXXX" className="text-construction-200 hover:text-orange-400 transition-colors duration-200">
-                  514-XXX-XXXX
+                <a
+                  href="tel:+237699540594"
+                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
+                >
+                  +237 6 99 54 05 94
                 </a>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                <a href="mailto:info@imc-formation.ca" className="text-construction-200 hover:text-orange-400 transition-colors duration-200">
-                  info@imc-formation.ca
+                <a
+                  href="mailto:info@imc-formation.cm"
+                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
+                >
+                  info@imc-formation.cm
                 </a>
               </div>
             </div>
@@ -127,7 +150,8 @@ const Footer = () => {
           <div className="text-center mb-6">
             <h4 className="text-lg font-semibold mb-4">Nos partenaires</h4>
             <p className="text-construction-300">
-              Nous collaborons avec plusieurs entreprises du secteur pour garantir l'employabilité de nos diplômés
+              Nous collaborons avec plusieurs entreprises du secteur pour
+              garantir l'employabilité de nos diplômés
             </p>
           </div>
         </div>
@@ -136,16 +160,26 @@ const Footer = () => {
         <div className="border-t border-construction-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-construction-300 text-sm">
-              © 2024 Institut des Métiers de la Construction. Tous droits réservés.
+              © 2024 Institut des Métiers de la Construction. Tous droits
+              réservés.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-construction-300 hover:text-orange-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-construction-300 hover:text-orange-400 transition-colors duration-200"
+              >
                 Mentions légales
               </a>
-              <a href="#" className="text-construction-300 hover:text-orange-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-construction-300 hover:text-orange-400 transition-colors duration-200"
+              >
                 Politique de confidentialité
               </a>
-              <a href="#" className="text-construction-300 hover:text-orange-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-construction-300 hover:text-orange-400 transition-colors duration-200"
+              >
                 CGV
               </a>
             </div>

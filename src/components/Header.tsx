@@ -28,7 +28,9 @@ const Header = () => {
               <h1 className="text-xl font-bold text-construction-800">
                 Institut des Métiers
               </h1>
-              <p className="text-sm text-construction-600">de la Construction</p>
+              <p className="text-sm text-construction-600">
+                de la Construction
+              </p>
             </div>
           </div>
 
@@ -49,7 +51,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center text-sm text-gray-600">
               <Phone className="w-4 h-4 mr-1" />
-              <span>514-XXX-XXXX</span>
+              <a href="tel:+237699540594">Nous appeler</a>
             </div>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white">
               Contactez-nous
@@ -86,7 +88,7 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4 border-t">
                 <div className="flex items-center text-sm text-gray-600 px-3">
                   <Phone className="w-4 h-4 mr-2" />
-                  <span>514-XXX-XXXX</span>
+                  <span>+237 6 99 54 05 94</span>
                 </div>
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white mx-3">
                   Contactez-nous
