@@ -159,16 +159,11 @@ const ContactSection = () => {
                   </label>
                   <select className="w-full h-12 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-construction-500">
                     <option value="">Sélectionnez une formation</option>
-                    <option value="gestion">Gestion de chantier</option>
-                    <option value="charpenterie">
-                      Charpenterie-menuiserie
-                    </option>
-                    <option value="electricite">
-                      Électricité de construction
-                    </option>
-                    <option value="plomberie">Plomberie et chauffage</option>
-                    <option value="finition">Finition de bâtiment</option>
-                    <option value="securite">Sécurité sur chantier</option>
+                    <option value="gestion">Gestion de projet</option>
+                    <option value="bim">BIM Manager</option>
+                    <option value="designer">Designer de Cuisine</option>
+                    <option value="interieur">Architecture d'Intérieur</option>
+                    <option value="btp">Ingénieur de Suivie BTP</option>
                   </select>
                 </div>
 

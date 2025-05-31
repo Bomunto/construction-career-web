@@ -251,7 +251,7 @@ const FormationDetail = () => {
                   </p>
                   <div className="space-y-2">
                     <Button className="w-full bg-construction-600 hover:bg-construction-700">
-                      Demander des informations
+                      <a href="/contact">Demander des informations</a>
                     </Button>
                     <Button
                       asChild

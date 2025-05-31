@@ -37,21 +37,14 @@ const Footer = () => {
 
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="bg-construction-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-300"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/institut-des-metiers-de-la-construction/?viewAsMember=true"
                 className="bg-construction-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/imc_yaounde?igsh=OHpqdnp6bzZxZ2Nq"
                 className="bg-construction-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-300"
                 aria-label="Instagram"
               >
@@ -74,7 +67,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#formations"
+                  href="/formations"
                   className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
                 >
                   Nos formations
@@ -82,26 +75,18 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#atouts"
+                  href="/formateurs"
                   className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
                 >
-                  Nos atouts
+                  Notre équipe
                 </a>
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
                 >
                   Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-construction-200 hover:text-orange-400 transition-colors duration-200"
-                >
-                  Inscription
                 </a>
               </li>
             </ul>

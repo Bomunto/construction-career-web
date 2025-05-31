@@ -21,7 +21,7 @@ const VideoSection = () => {
           <div className="relative bg-construction-900 rounded-2xl overflow-hidden shadow-2xl aspect-video">
             <video 
               controls 
-              poster="/path/to/poster.jpg"
+              poster="/public/imccover.jpeg"
               className="w-full h-full object-cover"
             >
               <source src="/public/imc_TXiBjLr0.mp4" type="video/mp4" />
