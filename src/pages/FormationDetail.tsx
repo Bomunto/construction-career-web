@@ -250,8 +250,8 @@ const FormationDetail = () => {
                     inscrire.
                   </p>
                   <div className="space-y-2">
-                    <Button className="w-full bg-construction-600 hover:bg-construction-700">
-                      <a href="/contact">Demander des informations</a>
+                    <Button asChild className="w-full bg-construction-600 hover:bg-construction-700">
+                      <Link to="/contact">Demander des informations</Link>
                     </Button>
                     <Button
                       asChild

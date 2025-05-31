@@ -1,17 +1,16 @@
-
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Accueil', href: '/' },
-    { name: 'Formations', href: '/formations' },
-    { name: 'Notre Equipe', href: '/formateurs' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Accueil", to: "/" },
+    { name: "Formations", to: "/formations" },
+    { name: "Notre Equipe", to: "/formateurs" },
+    { name: "Contact", to: "/contact" },
   ];
 
   return (
@@ -38,23 +37,13 @@ const Header = () => {
           {/* Navigation Desktop */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              item.href.startsWith('/') ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.to}
+                className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                {item.name}
+              </Link>
             ))}
           </nav>
 
@@ -89,25 +78,14 @@ const Header = () => {
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                item.href.startsWith('/') ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t">
                 <div className="flex items-center text-sm text-gray-600 px-3">

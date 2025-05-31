@@ -1,53 +1,61 @@
-
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { 
-  GraduationCap, 
-  Briefcase, 
-  Clock, 
-  Building2, 
-  Heart, 
+import React from "react";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  GraduationCap,
+  Briefcase,
+  Clock,
+  Building2,
+  Heart,
   Handshake,
-  Users
-} from 'lucide-react';
+  Users,
+} from "lucide-react";
 
 const AtoutsSection = () => {
   const atouts = [
     {
       icon: GraduationCap,
       title: "Enseignants compétents et passionnés",
-      description: "Notre équipe pédagogique combine expérience professionnelle et passion pour l'enseignement"
+      description:
+        "Notre équipe pédagogique combine expérience professionnelle et passion pour l'enseignement",
     },
     {
       icon: Briefcase,
       title: "Formations aux perspectives d'emploi intéressantes",
-      description: "Des programmes conçus pour répondre aux besoins du marché du travail"
+      description:
+        "Des programmes conçus pour répondre aux besoins du marché du travail",
     },
     {
       icon: Clock,
       title: "Horaire de jour et de soir",
-      description: "Flexibilité d'horaires pour s'adapter à votre situation personnelle"
+      description:
+        "Flexibilité d'horaires pour s'adapter à votre situation personnelle",
     },
     {
       icon: Building2,
       title: "Locaux modernes",
-      description: "Installations récentes avec équipements à la pointe de la technologie"
+      description:
+        "Installations récentes avec équipements à la pointe de la technologie",
     },
     {
       icon: Heart,
       title: "Cadre d'apprentissage chaleureux",
-      description: "Un environnement vaste, accueillant et facilement accessible"
+      description:
+        "Un environnement vaste, accueillant et facilement accessible",
     },
     {
       icon: Handshake,
       title: "Partenariats entreprises",
-      description: "Collaboration étroite avec plusieurs entreprises du secteur"
+      description:
+        "Collaboration étroite avec plusieurs entreprises du secteur",
     },
     {
       icon: Users,
       title: "École ouverte à tous",
-      description: "Accueil de tous les profils, avec ou sans expérience préalable"
-    }
+      description:
+        "Accueil de tous les profils, avec ou sans expérience préalable",
+    },
   ];
 
   return (
@@ -99,12 +107,20 @@ const AtoutsSection = () => {
               votre avenir professionnel
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300">
-                <a href="/formations">Découvrir nos formations</a>
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-construction-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                <a href="/contact">Demander des informations</a>
-              </button>
+              <Button
+                asChild
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+              >
+                <Link to="/formations">Découvrir nos formations</Link>
+              </Button>
+
+              <Button
+                asChild
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white hover:text-construction-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              >
+                <Link to="/contact">Demander des informations</Link>
+              </Button>
             </div>
           </div>
         </div>

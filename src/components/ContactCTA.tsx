@@ -15,12 +15,13 @@ const ContactCTA = () => {
               <h3 className="text-3xl font-bold mb-6">
                 Une question ? Contactez-nous !
               </h3>
-              
+
               <p className="text-xl text-orange-100 mb-8 leading-relaxed">
-                Notre équipe est à votre disposition pour vous accompagner dans votre projet de formation. 
-                Nous répondons à toutes vos questions rapidement.
+                Notre équipe est à votre disposition pour vous accompagner dans
+                votre projet de formation. Nous répondons à toutes vos questions
+                rapidement.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-4">
                   <div className="bg-white/20 p-3 rounded-lg">
@@ -31,7 +32,7 @@ const ContactCTA = () => {
                     <p className="text-orange-100">+237 6 99 54 05 94</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="bg-white/20 p-3 rounded-lg">
                     <Mail className="w-6 h-6" />
@@ -41,7 +42,7 @@ const ContactCTA = () => {
                     <p className="text-orange-100">info@imc-formation.cm</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="bg-white/20 p-3 rounded-lg">
                     <MapPin className="w-6 h-6" />
@@ -52,13 +53,17 @@ const ContactCTA = () => {
                   </div>
                 </div>
               </div>
-              
-              <Link to="/contact">
-                <Button size="lg" className="bg-white hover:bg-gray-100 text-orange-600 text-lg px-8 py-4">
+
+              <Button
+                asChild
+                size="lg"
+                className="bg-white hover:bg-gray-100 text-orange-600 text-lg px-8 py-4"
+              >
+                <Link to="/contact">
                   Nous contacter
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
 
             {/* Informations pratiques */}
@@ -66,24 +71,32 @@ const ContactCTA = () => {
               <h4 className="text-2xl font-bold text-white mb-8 text-center">
                 Pourquoi nous contacter ?
               </h4>
-              
+
               <div className="space-y-6">
                 <div className="bg-white/10 rounded-lg p-6 text-center">
                   <MessageCircle className="w-8 h-8 text-white mx-auto mb-3" />
-                  <h5 className="font-semibold text-white mb-2">Conseil personnalisé</h5>
-                  <p className="text-orange-100 text-sm">Orientation gratuite</p>
+                  <h5 className="font-semibold text-white mb-2">
+                    Conseil personnalisé
+                  </h5>
+                  <p className="text-orange-100 text-sm">
+                    Orientation gratuite
+                  </p>
                 </div>
-                
+
                 <div className="bg-white/10 rounded-lg p-6 text-center">
                   <Phone className="w-8 h-8 text-white mx-auto mb-3" />
-                  <h5 className="font-semibold text-white mb-2">Réponse rapide</h5>
+                  <h5 className="font-semibold text-white mb-2">
+                    Réponse rapide
+                  </h5>
                   <p className="text-orange-100 text-sm">Sous 24h maximum</p>
                 </div>
-                
+
                 <div className="bg-white/10 rounded-lg p-6 text-center">
                   <MapPin className="w-8 h-8 text-white mx-auto mb-3" />
                   <h5 className="font-semibold text-white mb-2">Rendez-vous</h5>
-                  <p className="text-orange-100 text-sm">Visite de nos locaux</p>
+                  <p className="text-orange-100 text-sm">
+                    Visite de nos locaux
+                  </p>
                 </div>
               </div>
             </div>

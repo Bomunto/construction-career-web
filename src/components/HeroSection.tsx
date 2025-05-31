@@ -1,7 +1,7 @@
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Award, Building } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Users, Award, Building } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -42,17 +42,23 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
+                asChild
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8 py-4">
-                <a href="/formations">Découvrir nos formations</a>
-                <ArrowRight className="ml-2 w-5 h-5" />
+                className="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8 py-4"
+              >
+                <Link to="/formations">
+                  Découvrir nos formations
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
               </Button>
+
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="border-white text-black hover:bg-white hover:text-construction-800 text-lg px-8 py-4"
               >
-                <a href="/contact">Nous contacter</a>
+                <Link to="/contact">Nous contacter</Link>
               </Button>
             </div>
           </div>
