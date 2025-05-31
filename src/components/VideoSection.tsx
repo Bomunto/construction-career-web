@@ -19,27 +19,15 @@ const VideoSection = () => {
         <div className="relative max-w-4xl mx-auto">
           {/* Container pour la vidéo */}
           <div className="relative bg-construction-900 rounded-2xl overflow-hidden shadow-2xl aspect-video">
-            {/* Placeholder pour la vidéo - à remplacer par une vraie vidéo */}
-            <div className="absolute inset-0 bg-gradient-to-br from-construction-800 to-construction-900 flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="bg-orange-500 p-6 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer group">
-                  <Play className="w-8 h-8 text-white ml-1 group-hover:scale-110 transition-transform" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Vidéo de présentation</h3>
-                <p className="text-construction-200">Cliquez pour découvrir notre école</p>
-              </div>
-            </div>
-            
-            {/* Si vous avez une vidéo, décommentez et remplacez cette section :
             <video 
               controls 
               poster="/path/to/poster.jpg"
               className="w-full h-full object-cover"
             >
-              <source src="/path/to/video.mp4" type="video/mp4" />
+              <source src="/public/imc_TXiBjLr0.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
-            */}
+            
           </div>
 
           {/* Points clés sous la vidéo */}

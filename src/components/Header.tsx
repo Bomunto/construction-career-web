@@ -10,8 +10,7 @@ const Header = () => {
   const navigation = [
     { name: 'Accueil', href: '/' },
     { name: 'Formations', href: '/formations' },
-    { name: 'Formateurs', href: '/formateurs' },
-    { name: 'Nos Atouts', href: '/#atouts' },
+    { name: 'Notre Equipe', href: '/formateurs' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -113,7 +112,7 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4 border-t">
                 <div className="flex items-center text-sm text-gray-600 px-3">
                   <Phone className="w-4 h-4 mr-2" />
-                  <span>+237 6 99 54 05 94</span>
+                  <a href="tel:+237699540594">Nous appeler</a>
                 </div>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   <Button className="bg-orange-500 hover:bg-orange-600 text-white mx-3">
