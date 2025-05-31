@@ -49,7 +49,7 @@ const FormationDetail = () => {
         {/* Breadcrumb */}
         <div className="mb-8">
           <Link
-            to="/#formations"
+            to="/formations"
             className="inline-flex items-center text-construction-600 hover:text-construction-700"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
