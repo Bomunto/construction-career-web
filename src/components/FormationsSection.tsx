@@ -26,8 +26,8 @@ const FormationsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {formations.map((formation, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg overflow-hidden">
+          {formations.map((formation) => (
+            <Card key={formation.id} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg overflow-hidden h-full flex flex-col">
               <CardHeader className="pb-4">
                 <div className={`bg-gradient-to-r ${formation.color} p-4 rounded-2xl w-fit mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <formation.icon className="w-8 h-8 text-white" />
@@ -37,8 +37,8 @@ const FormationsSection = () => {
                 </CardTitle>
               </CardHeader>
               
-              <CardContent className="space-y-4">
-                <p className="text-gray-600 leading-relaxed">
+              <CardContent className="space-y-4 flex-1 flex flex-col">
+                <p className="text-gray-600 leading-relaxed flex-1">
                   {formation.description}
                 </p>
                 
@@ -53,23 +53,30 @@ const FormationsSection = () => {
                   </Badge>
                 </div>
                 
-                <div>
-                  <p className="text-sm font-semibold text-construction-700 mb-2">Débouchés :</p>
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-construction-700">Débouchés :</p>
                   <div className="flex flex-wrap gap-1">
-                    {formation.emplois.map((emploi, idx) => (
+                    {formation.emplois.slice(0, 3).map((emploi, idx) => (
                       <Badge key={idx} variant="outline" className="text-xs">
                         {emploi}
                       </Badge>
                     ))}
+                    {formation.emplois.length > 3 && (
+                      <Badge variant="outline" className="text-xs">
+                        +{formation.emplois.length - 3} autres
+                      </Badge>
+                    )}
                   </div>
                 </div>
                 
-                <Link to={`/formation/${formation.id}`}>
-                  <Button className="w-full bg-construction-600 hover:bg-construction-700 text-white group-hover:bg-orange-500 transition-all duration-300">
-                    En savoir plus
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </Link>
+                <div className="mt-auto pt-4">
+                  <Link to={`/formation/${formation.id}`} className="block">
+                    <Button className="w-full bg-construction-600 hover:bg-construction-700 text-white group-hover:bg-orange-500 transition-all duration-300">
+                      En savoir plus
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           ))}
