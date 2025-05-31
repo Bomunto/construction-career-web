@@ -1,10 +1,10 @@
 
 import { 
-  Hammer, 
-  HardHat, 
-  Wrench, 
-  Zap, 
-  PaintBucket,
+  Target, 
+  Building, 
+  PaintBucket, 
+  Home, 
+  Wrench,
   LucideIcon
 } from 'lucide-react';
 
@@ -27,246 +27,213 @@ export interface Formation {
   };
   certification: string;
   price: string;
+  startDate: string;
 }
 
 export const formations: Formation[] = [
   {
-    id: "gestion-chantier",
-    icon: HardHat,
-    title: "Gestion de chantier",
-    description: "Apprenez à coordonner et superviser les projets de construction du début à la fin.",
-    duration: "12 mois",
+    id: "gestion-de-projet",
+    icon: Target,
+    title: "Gestion de Projet",
+    description: "Devenez des professionnels en Gestion de Projet ! Cette filière forme des professionnels capables de planifier, coordonner et superviser des projets de construction.",
+    duration: "03 Mois",
     niveau: "Intermédiaire",
-    emplois: ["Chef de chantier", "Coordinateur", "Superviseur"],
-    color: "from-blue-500 to-blue-600",
-    detailedDescription: "Cette formation complète vous prépare à devenir un leader sur les chantiers de construction. Vous apprendrez à planifier, organiser et superviser tous les aspects d'un projet de construction, de la lecture des plans à la gestion des équipes et au respect des délais.",
+    emplois: ["Chef de projet", "Coordinateur de projet", "Gestionnaire BTP", "Superviseur de chantier"],
+    color: "from-purple-500 to-purple-600",
+    detailedDescription: "Cette filière forme des professionnels capables de planifier, coordonner et superviser des projets de construction, de la conception à la livraison. Le gestionnaire de projet BTP assure le respect des délais, des budgets et des normes, tout en garantissant la qualité des travaux et la sécurité sur le terrain.",
     prerequisites: [
-      "Expérience de 2 ans minimum dans la construction",
       "Diplôme d'études secondaires",
-      "Capacités de leadership et communication"
+      "Expérience en construction recommandée",
+      "Capacités de leadership",
+      "Bonnes compétences en communication"
     ],
     program: [
-      "Lecture et interprétation de plans",
-      "Planification et ordonnancement des travaux",
-      "Gestion d'équipes et leadership",
-      "Sécurité sur chantier et réglementation",
-      "Contrôle qualité et normes",
-      "Gestion budgétaire et coûts",
-      "Relations clients et coordination",
-      "Logiciels de gestion de projet"
+      "Planification et gestion de projet",
+      "Coordination d'équipes multidisciplinaires",
+      "Gestion des budgets et des ressources",
+      "Respect des délais et des normes",
+      "Contrôle qualité des travaux",
+      "Sécurité sur les chantiers",
+      "Outils de gestion de projet",
+      "Communication avec les clients"
     ],
     career: [
-      "Chef de chantier résidentiel ou commercial",
-      "Coordinateur de projets de construction",
+      "Chef de projet BTP",
+      "Coordinateur de construction",
+      "Gestionnaire de chantier",
       "Superviseur de travaux",
-      "Contremaître spécialisé",
-      "Consultant en gestion de chantier"
+      "Consultant en gestion de projet"
     ],
     schedule: {
       jour: ["Lundi au vendredi: 8h00 - 16h00"],
       soir: ["Lundi au jeudi: 18h00 - 22h00"]
     },
-    certification: "Diplôme d'études professionnelles (DEP) en gestion de chantier",
-    price: "À partir de 3 500€"
+    certification: "Certificat délivré",
+    price: "300 000 F",
+    startDate: "5 Juin 2025"
   },
   {
-    id: "charpenterie-menuiserie",
-    icon: Hammer,
-    title: "Charpenterie-menuiserie",
-    description: "Maîtrisez les techniques de travail du bois et de construction de structures.",
-    duration: "18 mois",
-    niveau: "Débutant",
-    emplois: ["Charpentier", "Menuisier", "Poseur"],
-    color: "from-amber-500 to-amber-600",
-    detailedDescription: "Découvrez l'art ancestral du travail du bois appliqué aux techniques modernes de construction. Cette formation vous enseignera toutes les compétences nécessaires pour concevoir, fabriquer et installer des structures en bois.",
+    id: "bim-manager",
+    icon: Building,
+    title: "BIM Manager",
+    description: "Devenez des professionnels en gestion BIM ! La filière forme des experts du Building Information Modeling (BIM), une méthode innovante de gestion de projets de construction.",
+    duration: "03 Mois",
+    niveau: "Avancé",
+    emplois: ["BIM Manager", "Coordinateur BIM", "Spécialiste BIM", "Gestionnaire de maquette numérique"],
+    color: "from-blue-500 to-blue-600",
+    detailedDescription: "La filière forme des experts du Building Information Modeling (BIM), une méthode innovante de gestion de projets de construction basée sur des maquettes numériques 3D. Le BIM Manager coordonne les acteurs du chantier, optimise les coûts, les délais et la qualité grâce à des outils numériques avancés.",
     prerequisites: [
-      "Aucune expérience requise",
-      "Bonne condition physique",
-      "Aptitude pour le travail manuel",
-      "Précision et attention aux détails"
+      "Formation en architecture ou ingénierie",
+      "Maîtrise des outils informatiques",
+      "Expérience en construction",
+      "Capacités d'analyse et de coordination"
     ],
     program: [
-      "Propriétés et essences de bois",
-      "Outils manuels et électroportatifs",
-      "Techniques de coupe et d'assemblage",
-      "Charpente traditionnelle et moderne",
-      "Menuiserie intérieure et extérieure",
-      "Isolation et étanchéité",
-      "Finitions et traitements",
-      "Sécurité et protection individuelle"
+      "Modélisation 3D et BIM",
+      "Coordination des acteurs du projet",
+      "Optimisation des coûts et délais",
+      "Gestion de la qualité numérique",
+      "Outils BIM avancés",
+      "Collaboration interdisciplinaire",
+      "Analyse de données de construction",
+      "Gestion de maquettes numériques"
     ],
     career: [
-      "Charpentier-couvreur",
-      "Menuisier d'agencement",
-      "Poseur de charpente",
-      "Artisan menuisier indépendant",
-      "Technicien en construction bois"
+      "BIM Manager",
+      "Coordinateur BIM",
+      "Spécialiste en modélisation 3D",
+      "Gestionnaire de maquette numérique",
+      "Consultant BIM"
     ],
     schedule: {
-      jour: ["Lundi au vendredi: 7h30 - 15h30"],
-      soir: ["Mardi et jeudi: 18h00 - 22h00", "Samedi: 8h00 - 16h00"]
+      jour: ["Lundi au vendredi: 8h00 - 16h00"],
+      soir: ["Mardi et jeudi: 18h00 - 22h00"]
     },
-    certification: "Diplôme d'études professionnelles (DEP) en charpenterie-menuiserie",
-    price: "À partir de 4 200€"
+    certification: "Certificat délivré",
+    price: "500 000 F",
+    startDate: "5 Juin 2025"
   },
   {
-    id: "electricite-construction",
-    icon: Zap,
-    title: "Électricité de construction",
-    description: "Formation complète en installation électrique résidentielle et commerciale.",
-    duration: "15 mois",
+    id: "designer-de-cuisine",
+    icon: PaintBucket,
+    title: "Designer de Cuisine",
+    description: "Devenez des professionnels en Design de Cuisine ! Cette formation prépare à la conception de cuisines modernes, fonctionnelles et esthétiques.",
+    duration: "02 Mois",
     niveau: "Débutant",
-    emplois: ["Électricien", "Installateur", "Technicien"],
-    color: "from-yellow-500 to-yellow-600",
-    detailedDescription: "Maîtrisez tous les aspects de l'électricité dans le bâtiment, des installations résidentielles simples aux systèmes commerciaux complexes. Une formation essentielle dans un secteur en forte demande.",
+    emplois: ["Designer de cuisine", "Concepteur d'intérieur", "Spécialiste aménagement", "Consultant cuisine"],
+    color: "from-pink-500 to-pink-600",
+    detailedDescription: "Cette formation prépare à la conception de cuisines modernes, fonctionnelles et esthétiques. Elle combine design, ergonomie et techniques de modélisation pour former des professionnels prêts à intégrer des agences, des marques ou à travailler en freelance.",
     prerequisites: [
-      "Diplôme d'études secondaires",
-      "Bonnes notions en mathématiques",
-      "Capacité de travail en hauteur",
-      "Vision normale des couleurs"
+      "Sens artistique et créativité",
+      "Intérêt pour le design d'intérieur",
+      "Notions de base en dessin",
+      "Capacité d'écoute client"
     ],
     program: [
-      "Principes fondamentaux de l'électricité",
-      "Lecture de schémas électriques",
-      "Installation de câblages et conduits",
-      "Systèmes de distribution électrique",
-      "Éclairage et prises de courant",
-      "Systèmes de sécurité et alarmes",
-      "Domotique et automatisation",
-      "Normes et réglementations électriques"
+      "Design et conception de cuisines",
+      "Ergonomie et fonctionnalité",
+      "Techniques de modélisation",
+      "Choix des matériaux et finitions",
+      "Relation client et conseil",
+      "Logiciels de conception 3D",
+      "Tendances et styles modernes",
+      "Gestion de projet d'aménagement"
     ],
     career: [
-      "Électricien résidentiel",
-      "Électricien industriel",
-      "Technicien en maintenance électrique",
-      "Installateur de systèmes de sécurité",
-      "Entrepreneur électricien"
+      "Designer de cuisine",
+      "Concepteur d'espaces culinaires",
+      "Spécialiste en aménagement",
+      "Consultant en design de cuisine",
+      "Designer d'intérieur freelance"
+    ],
+    schedule: {
+      jour: ["Lundi au vendredi: 9h00 - 15h00"],
+      soir: ["Lundi et mercredi: 18h00 - 22h00"]
+    },
+    certification: "Certificat délivré",
+    price: "300 000 F",
+    startDate: "5 Juin 2025"
+  },
+  {
+    id: "architecture-interieur",
+    icon: Home,
+    title: "Architecture d'Intérieur",
+    description: "Devenez des professionnels en Conception Graphique et en Architecture d'Intérieur ! La filière forme des professionnels capables de concevoir, d'aménager et de valoriser des espaces intérieurs.",
+    duration: "12 Mois",
+    niveau: "Intermédiaire",
+    emplois: ["Architecte d'intérieur", "Décorateur", "Concepteur d'espaces", "Designer d'intérieur"],
+    color: "from-orange-500 to-orange-600",
+    detailedDescription: "La filière Architecture d'intérieur forme des professionnels capables de concevoir, d'aménager et de valoriser des espaces intérieurs, en alliant esthétique, fonctionnalité et confort. L'architecte d'intérieur intervient sur différents types de projets : habitations, bureaux, commerces, hôtels, lieux culturels.",
+    prerequisites: [
+      "Sens artistique développé",
+      "Créativité et imagination",
+      "Notions en dessin technique",
+      "Intérêt pour l'art et le design"
+    ],
+    program: [
+      "Conception et aménagement d'espaces",
+      "Design d'intérieur et décoration",
+      "Valorisation d'espaces intérieurs",
+      "Ergonomie et fonctionnalité",
+      "Esthétique et confort",
+      "Projets résidentiels et commerciaux",
+      "Logiciels de conception 3D",
+      "Histoire de l'art et styles"
+    ],
+    career: [
+      "Architecte d'intérieur",
+      "Décorateur d'intérieur",
+      "Concepteur d'espaces commerciaux",
+      "Designer d'intérieur freelance",
+      "Consultant en aménagement"
     ],
     schedule: {
       jour: ["Lundi au vendredi: 8h00 - 16h00"],
       soir: ["Lundi, mercredi, vendredi: 18h00 - 22h00"]
     },
-    certification: "Diplôme d'études professionnelles (DEP) en électricité",
-    price: "À partir de 3 800€"
+    certification: "Certificat international délivré",
+    price: "1 000 000 F",
+    startDate: "5 Juin 2025"
   },
   {
-    id: "plomberie-chauffage",
+    id: "ingenieur-suivie-btp",
     icon: Wrench,
-    title: "Plomberie et chauffage",
-    description: "Spécialisez-vous dans l'installation et la maintenance des systèmes de plomberie.",
-    duration: "16 mois",
-    niveau: "Débutant",
-    emplois: ["Plombier", "Installateur", "Réparateur"],
-    color: "from-cyan-500 to-cyan-600",
-    detailedDescription: "Apprenez à installer, maintenir et réparer tous les systèmes de plomberie et de chauffage. Une expertise technique très recherchée dans le secteur du bâtiment.",
+    title: "Ingénieur de Suivie BTP",
+    description: "Devenez des professionnels en Ingénierie BTP ! La filière forme des ingénieurs spécialisés dans la conception, la planification et la réalisation d'infrastructures.",
+    duration: "02 Mois",
+    niveau: "Avancé",
+    emplois: ["Ingénieur BTP", "Ingénieur de suivi", "Superviseur technique", "Gestionnaire d'infrastructure"],
+    color: "from-green-500 to-green-600",
+    detailedDescription: "La filière forme des ingénieurs spécialisés dans la conception, la planification et la réalisation d'infrastructures : bâtiments, routes, ponts, etc. Alliant rigueur technique et gestion de projet, l'ingénieur BTP est un acteur clé du développement durable et urbain.",
     prerequisites: [
-      "Aucune expérience requise",
-      "Bonne condition physique",
-      "Capacité de travail dans des espaces restreints",
-      "Aptitude pour la résolution de problèmes"
+      "Formation technique ou scientifique",
+      "Solides bases en mathématiques",
+      "Expérience en construction",
+      "Capacités d'analyse technique"
     ],
     program: [
-      "Systèmes de distribution d'eau",
-      "Évacuation et assainissement",
-      "Installation de sanitaires",
-      "Chauffage central et radiateurs",
-      "Systèmes de climatisation",
-      "Pompes à chaleur et énergies renouvelables",
-      "Détection de fuites et réparations",
-      "Soudure et raccordements"
+      "Conception d'infrastructures",
+      "Planification de projets BTP",
+      "Réalisation et suivi de chantier",
+      "Rigueur technique et normes",
+      "Gestion de projet complexe",
+      "Développement durable",
+      "Technologies de construction",
+      "Contrôle qualité et sécurité"
     ],
     career: [
-      "Plombier-chauffagiste",
-      "Installateur sanitaire",
-      "Technicien en géothermie",
-      "Dépanneur d'urgence",
-      "Artisan plombier indépendant"
+      "Ingénieur BTP",
+      "Ingénieur de suivi de chantier",
+      "Superviseur technique",
+      "Gestionnaire d'infrastructures",
+      "Consultant en ingénierie"
     ],
     schedule: {
-      jour: ["Lundi au vendredi: 7h30 - 15h30"],
+      jour: ["Lundi au vendredi: 8h00 - 16h00"],
       soir: ["Mardi et jeudi: 18h00 - 22h00"]
     },
-    certification: "Diplôme d'études professionnelles (DEP) en plomberie-chauffage",
-    price: "À partir de 3 900€"
-  },
-  {
-    id: "finition-batiment",
-    icon: PaintBucket,
-    title: "Finition de bâtiment",
-    description: "Apprenez les techniques de finition intérieure et extérieure.",
-    duration: "10 mois",
-    niveau: "Débutant",
-    emplois: ["Peintre", "Plâtrier", "Finisseur"],
-    color: "from-purple-500 to-purple-600",
-    detailedDescription: "Perfectionnez l'art de la finition dans le bâtiment. Cette formation vous apprendra toutes les techniques pour donner l'aspect final parfait à tout projet de construction.",
-    prerequisites: [
-      "Sens artistique et esthétique",
-      "Précision et minutie",
-      "Résistance aux poussières et odeurs",
-      "Capacité de travail en hauteur"
-    ],
-    program: [
-      "Préparation des surfaces",
-      "Techniques de peinture et enduits",
-      "Pose de revêtements muraux",
-      "Plâtrerie et cloisons sèches",
-      "Isolation thermique et phonique",
-      "Décoration et finitions artistiques",
-      "Produits et matériaux modernes",
-      "Techniques de restauration"
-    ],
-    career: [
-      "Peintre en bâtiment",
-      "Plâtrier-peintre",
-      "Poseur de revêtements",
-      "Décorateur d'intérieur",
-      "Restaurateur de bâtiments anciens"
-    ],
-    schedule: {
-      jour: ["Lundi au vendredi: 8h00 - 15h00"],
-      soir: ["Lundi, mercredi: 18h00 - 22h00"]
-    },
-    certification: "Diplôme d'études professionnelles (DEP) en finition de bâtiment",
-    price: "À partir de 2 800€"
-  },
-  {
-    id: "securite-chantier",
-    icon: HardHat,
-    title: "Sécurité sur chantier",
-    description: "Formation spécialisée en prévention et sécurité dans le BTP.",
-    duration: "6 mois",
-    niveau: "Tous niveaux",
-    emplois: ["Préventeur", "Coordinateur sécurité", "Inspecteur"],
-    color: "from-red-500 to-red-600",
-    detailedDescription: "Devenez un expert en sécurité sur les chantiers de construction. Cette formation essentielle vous permettra de prévenir les accidents et d'assurer la sécurité de tous les intervenants.",
-    prerequisites: [
-      "Expérience dans le BTP recommandée",
-      "Sens de l'observation",
-      "Capacités de communication",
-      "Rigueur et autorité naturelle"
-    ],
-    program: [
-      "Réglementation sécurité et santé au travail",
-      "Analyse et évaluation des risques",
-      "Équipements de protection individuelle",
-      "Prévention des chutes et travail en hauteur",
-      "Manipulation d'équipements et machines",
-      "Plans de prévention et protocoles",
-      "Formation et sensibilisation des équipes",
-      "Gestion des accidents et premiers secours"
-    ],
-    career: [
-      "Coordinateur SPS (Sécurité et Protection de la Santé)",
-      "Préventeur de chantier",
-      "Inspecteur sécurité",
-      "Formateur en sécurité BTP",
-      "Consultant en prévention des risques"
-    ],
-    schedule: {
-      jour: ["Lundi au vendredi: 9h00 - 17h00"],
-      soir: ["Mardi et jeudi: 18h30 - 22h30"]
-    },
-    certification: "Certificat de coordinateur SPS et prévention BTP",
-    price: "À partir de 2 200€"
+    certification: "Certificat délivré",
+    price: "500 000 F",
+    startDate: "5 Juin 2025"
   }
 ];
