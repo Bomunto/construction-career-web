@@ -38,7 +38,7 @@ const Header = () => {
           {/* Navigation Desktop */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              item.href.startsWith('/#') ? (
+              item.href.startsWith('/') ? (
                 <a
                   key={item.name}
                   href={item.href}
