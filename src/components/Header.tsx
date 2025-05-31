@@ -12,7 +12,7 @@ const Header = () => {
     { name: 'Formations', href: '/formations' },
     { name: 'Formateurs', href: '/formateurs' },
     { name: 'Nos Atouts', href: '/#atouts' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -65,9 +65,11 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-1" />
               <a href="tel:+237699540594">Nous appeler</a>
             </div>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-              Contactez-nous
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                Contactez-nous
+              </Button>
+            </Link>
           </div>
 
           {/* Menu Mobile */}
@@ -113,9 +115,11 @@ const Header = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   <span>+237 6 99 54 05 94</span>
                 </div>
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white mx-3">
-                  Contactez-nous
-                </Button>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white mx-3">
+                    Contactez-nous
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>

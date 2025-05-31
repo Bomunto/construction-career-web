@@ -4,7 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import VideoSection from '@/components/VideoSection';
 import FormationsCTA from '@/components/FormationsCTA';
 import AtoutsSection from '@/components/AtoutsSection';
-import ContactSection from '@/components/ContactSection';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
       <VideoSection />
       <FormationsCTA />
       <AtoutsSection />
-      <ContactSection />
+      <ContactCTA />
       <Footer />
     </div>
   );
