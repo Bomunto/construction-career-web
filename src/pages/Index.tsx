@@ -2,7 +2,7 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import VideoSection from '@/components/VideoSection';
-import FormationsSection from '@/components/FormationsSection';
+import FormationsCTA from '@/components/FormationsCTA';
 import AtoutsSection from '@/components/AtoutsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -13,7 +13,7 @@ const Index = () => {
       <Header />
       <HeroSection />
       <VideoSection />
-      <FormationsSection />
+      <FormationsCTA />
       <AtoutsSection />
       <ContactSection />
       <Footer />

@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
@@ -7,10 +8,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Accueil', href: '#accueil' },
-    { name: 'Formations', href: '#formations' },
-    { name: 'Nos Atouts', href: '#atouts' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Accueil', href: '/' },
+    { name: 'Formations', href: '/formations' },
+    { name: 'Nos Atouts', href: '/#atouts' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -18,7 +19,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <div className="bg-construction-600 text-white p-2 rounded-lg mr-3">
               <div className="w-8 h-8 flex items-center justify-center font-bold text-lg">
                 IMC
@@ -32,18 +33,28 @@ const Header = () => {
                 de la Construction
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </a>
+              item.href.startsWith('/#') ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -76,14 +87,25 @@ const Header = () => {
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-gray-700 hover:text-construction-600 px-3 py-2 text-sm font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t">
                 <div className="flex items-center text-sm text-gray-600 px-3">
